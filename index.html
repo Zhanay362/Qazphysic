@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="kk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="QazPhysics — физиканы ойын арқылы меңгеруге арналған адаптивті онлайн-курс" />
+  <title>QazPhysics — Адаптивті физика</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="game.css" />
+  <link rel="stylesheet" href="adaptive.css" />
+  <link rel="stylesheet" href="levels.css" />
+  <link rel="stylesheet" href="progression.css" />
+  <link rel="stylesheet" href="layout-fix.css" />
+  <link rel="stylesheet" href="quest-game.css" />
+  <link rel="stylesheet" href="course-features.css" />
+  <link rel="stylesheet" href="theme-language.css" />
+  <link rel="stylesheet" href="stability-fix.css" />
+  <link rel="stylesheet" href="visibility-fix.css" />
+</head>
+<body>
+  <div class="noise"></div>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="QazPhysics басты бет"><span class="brand-mark">Q</span><span>Qaz<span>Physics</span></span></a>
+    <nav><a href="#courses">Курстар</a><a href="#lessons">Сабақтар</a><a href="#progress">Прогресс</a><a href="#game">Ойын</a></nav>
+    <div class="header-actions"><div class="lang-switch" aria-label="Тілді таңдау"><button class="active" data-lang="kk">ҚАЗ</button><button data-lang="ru">РУС</button></div><button class="icon-btn" id="headerTheme" aria-label="Түсті режим">☀</button><button class="profile-btn"><span>СТ</span><b>Студент</b><small>Демо режим</small></button></div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span></span> ФИЗИКА • ЖАҢАША ФОРМАТ</div>
+        <h1>Физиканы<br><em>сезін. зертте.</em><br>жеңіске жет.</h1>
+        <p>Қызықты тәжірибелер, интерактивті квиздер және дәл сенің деңгейіңе бейімделетін тапсырмалар.</p>
+        <div class="hero-actions"><button class="primary" data-scroll="courses">Сабақты бастау <span>→</span></button><button class="play" id="demoBtn"><i>▶</i> 60 секундтық шолу</button></div>
+        <div class="hero-stats"><div><strong>12</strong><span>бөлім</span></div><div><strong>240+</strong><span>тапсырма</span></div><div><strong>27</strong><span>жетістік</span></div></div>
+      </div>
+      <div class="hero-visual" aria-label="Физикалық орбита иллюстрациясы">
+        <div class="glow"></div><div class="orbit orbit-a"><span></span></div><div class="orbit orbit-b"><span></span></div><div class="orbit orbit-c"><span></span></div>
+        <div class="core"><span>F</span><small>= ma</small></div>
+        <div class="formula f1">E = mc²</div><div class="formula f2">v = s/t</div><div class="formula f3">⚡</div>
+        <div class="level-card"><small>БҮГІНГІ ПРОГРЕСС</small><b>+120 XP</b><div><span style="width:72%"></span></div><p>Тағы 80 XP — жаңа деңгей!</p></div>
+      </div>
+    </section>
+
+    <section class="continue-card reveal">
+      <div class="continue-icon">↗</div><div><small>СОҢҒЫ САБАҒЫҢ</small><h3>Қозғалыс және жылдамдық</h3><p>2-сабақ · Орташа жылдамдық</p></div>
+      <div class="continue-progress"><b>68%</b><div><span></span></div></div><button class="secondary" data-quiz="motion">Жалғастыру →</button>
+    </section>
+
+    <section class="section" id="courses">
+      <div class="section-heading reveal"><div><span class="kicker">БІЛІМ КАРТАСЫ</span><h2>Өз бағытыңды таңда</h2></div><p>Әр бөлім — жеке миссия. Теорияны оқы, тәжірибе жаса, квизден өтіп, жаңа деңгейлерді аш.</p></div>
+      <div class="course-grid">
+        <article class="course featured reveal"><div class="course-top"><span class="course-icon">↗</span><span class="tag active">ЖАЛҒАСТЫРУ</span></div><h3>Механика</h3><p>Қозғалыс, күш және энергия заңдарын меңгер.</p><div class="mini-meta"><span>8 сабақ</span><span>420 XP</span></div><div class="progress"><span style="width:68%"></span></div><button data-quiz="motion">Миссияны жалғастыру →</button></article>
+        <article class="course reveal"><div class="course-top"><span class="course-icon cyan">ϟ</span><span class="tag">2/7 АШЫҚ</span></div><h3>Электр және магнетизм</h3><p>Зарядтар әлемі мен магнит өрісін зертте.</p><div class="mini-meta"><span>7 сабақ</span><span>380 XP</span></div><div class="progress"><span style="width:29%"></span></div><button data-quiz="electric">Бөлімді ашу →</button></article>
+        <article class="course locked reveal"><div class="course-top"><span class="course-icon pink">≈</span><span class="tag">🔒 ҚҰЛЫПТАУЛЫ</span></div><h3>Тербелістер мен толқындар</h3><p>Дыбыс, жарық және толқын құпиялары.</p><div class="mini-meta"><span>6 сабақ</span><span>350 XP</span></div><div class="lock-note">Механикадан 4-деңгейге жет</div></article>
+        <article class="course reveal"><div class="course-top"><span class="course-icon orange">☀</span><span class="tag">ЖАҢА</span></div><h3>Жылу физикасы</h3><p>Температура мен энергия алмасуын түсін.</p><div class="mini-meta"><span>6 сабақ</span><span>340 XP</span></div><button data-quiz="heat">Бастау →</button></article>
+      </div>
+    </section>
+
+    <section class="adaptive section" id="adaptive">
+      <div class="adaptive-copy reveal"><span class="kicker">СЕН ҮШІН БЕЙІМДЕЛЕДІ</span><h2>Әр оқушыға —<br><em>өз траекториясы</em></h2><p>Жүйе жауаптарыңды талдап, келесі тапсырманың күрделілігін автоматты түрде таңдайды.</p><div class="steps"><div class="active"><b>01</b><span><strong>Деңгейіңді анықтаймыз</strong><small>Қысқа диагностикалық квиз</small></span></div><div><b>02</b><span><strong>Жеке маршрут құрамыз</strong><small>Әлсіз тақырыптарға көбірек көңіл</small></span></div><div><b>03</b><span><strong>Прогресті бейімдейміз</strong><small>Нәтижеге қарай күрделенеді</small></span></div></div></div>
+      <div class="adaptive-demo reveal"><div class="demo-head"><span>АДАПТИВТІ ТАПСЫРМА</span><span class="difficulty">● ОРТАША</span></div><div class="demo-body"><div class="q-no">03 <small>/ 05</small></div><p>Дене 5 секундта жылдамдығын 10 м/с-тан 25 м/с-қа арттырды. Үдеуін тап.</p><div class="answers"><button>2 м/с²</button><button class="correct">3 м/с² <span>✓</span></button><button>5 м/с²</button><button>7 м/с²</button></div><div class="feedback">Дұрыс! <span>a = (v − v₀) / t = 3 м/с²</span></div></div><div class="demo-foot"><span>Жауабыңа қарай келесі тапсырма <b>күрделірек</b> болады</span><div class="dots"><i class="done"></i><i class="done"></i><i class="active"></i><i></i><i></i></div></div></div>
+    </section>
+
+    <section class="section achievements" id="leaderboard"><div class="section-heading reveal"><div><span class="kicker">ГЕЙМИФИКАЦИЯ</span><h2>Үйрен. Ұпай жина. Жең.</h2></div><p>Күн сайынғы серияңды сақта, белгілерді аш және достарыңмен жарыс.</p></div><div class="achievement-grid"><div class="streak reveal"><span class="flame">♨</span><div><small>ҮЗДІКСІЗ СЕРИЯ</small><strong>7 күн</strong><p>Жеке рекорд: 12 күн</p></div><div class="week"><span class="on">Дс</span><span class="on">Сс</span><span class="on">Ср</span><span class="on">Бс</span><span class="on">Жм</span><span class="on">Сб</span><span>Жс</span></div></div><div class="badges reveal"><div><span>🏆</span><b>Алғашқы жеңіс</b><small>Ашылды</small></div><div><span>⚡</span><b>Жылдам ой</b><small>Ашылды</small></div><div class="muted"><span>◈</span><b>Ғалым</b><small>3/10 тәжірибе</small></div></div><div class="rank reveal"><small>АПТАЛЫҚ РЕЙТИНГ</small><div><b>—</b><span class="avatar">СТ</span><p><strong>Студент</strong><small>Демо режим</small></p><em>●</em></div><button>Толық рейтинг →</button></div></div></section>
+    <section class="cta reveal"><div><span class="kicker">АЛҒАШҚЫ МИССИЯ ДАЙЫН</span><h2>Физика әлемін<br>бүгін зерттей баста</h2><p>Диагностикалық квизден өтіп, жеке оқу траекторияңды ал.</p><button class="primary" data-quiz="diagnostic">Тегін бастау <span>→</span></button></div><div class="cta-orbit"><span>🚀</span></div></section>
+    <section class="learning-section section" id="lessons">
+      <div class="section-heading reveal"><div><span class="kicker">ТОЛЫҚ ОҚУ ЦИКЛІ</span><h2>Теориядан тәжірибеге</h2></div><p>Қысқаша теорияны меңгер, видеоны қара, тәжірибе жаса және біліміңді квизде тексер.</p></div>
+      <div class="learning-tabs reveal"><button class="active" data-learning-tab="theory">📘 Теория</button><button data-learning-tab="video">▶ Видеосабақтар</button><button data-learning-tab="lab">⚗ Виртуалды зертхана</button></div>
+      <div class="learning-panel active" id="theoryPanel"><div class="theory-grid"><article><span>↗</span><small>МЕХАНИКА</small><h3>Қозғалыс және күш</h3><p>Жылдамдық, үдеу, Ньютон заңдары және энергия.</p><button data-theory="mechanics">Теорияны оқу →</button></article><article><span>ϟ</span><small>ЭЛЕКТР</small><h3>Ток және кернеу</h3><p>Ом заңы, тізбектер және электр қуаты.</p><button data-theory="electric">Теорияны оқу →</button></article><article><span>☀</span><small>ЖЫЛУ</small><h3>Жылу құбылыстары</h3><p>Температура, жылу мөлшері және энергия алмасу.</p><button data-theory="heat">Теорияны оқу →</button></article><article><span>≈</span><small>ТОЛҚЫН</small><h3>Дыбыс және жарық</h3><p>Тербеліс, жиілік, толқын және оптика негіздері.</p><button data-theory="waves">Теорияны оқу →</button></article></div></div>
+      <div class="learning-panel" id="videoPanel"><div class="video-grid"><article><div class="video-cover"><span>▶</span><em>06:25</em></div><small>МЕХАНИКА · 1-САБАҚ</small><h3>Орташа жылдамдық</h3><p>Видео кейін осы карточкаға қосылады.</p><button data-video-placeholder>Видео күтілуде</button></article><article><div class="video-cover purple"><span>▶</span><em>08:10</em></div><small>ЭЛЕКТР · 1-САБАҚ</small><h3>Ом заңын түсіну</h3><p>Видео кейін осы карточкаға қосылады.</p><button data-video-placeholder>Видео күтілуде</button></article><article><div class="video-cover orange"><span>▶</span><em>05:40</em></div><small>ЖЫЛУ · 1-САБАҚ</small><h3>Жылу мөлшері</h3><p>Видео кейін осы карточкаға қосылады.</p><button data-video-placeholder>Видео күтілуде</button></article></div></div>
+      <div class="learning-panel" id="labPanel"><div class="pendulum-lab"><div class="pendulum-stage"><div class="pendulum-anchor"></div><div class="pendulum-arm" id="pendulumArm"><span></span></div><div class="lab-grid-lines"></div></div><div class="lab-controls"><span class="kicker">ВИРТУАЛДЫ ТӘЖІРИБЕ</span><h3>Математикалық маятник</h3><p>Жіптің ұзындығын өзгертіп, тербеліс периодының қалай өзгеретінін бақыла.</p><label>Жіп ұзындығы <b><span id="lengthValue">1.0</span> м</b><input id="lengthRange" type="range" min="30" max="180" value="100"></label><div class="lab-result"><span>T = 2π√(L/g)</span><strong id="periodValue">2.01 с</strong></div><button id="togglePendulum">⏸ Тоқтату</button></div></div></div>
+    </section>
+
+    <section class="progress-section section" id="progress">
+      <div class="section-heading reveal"><div><span class="kicker">ЖЕКЕ КАБИНЕТ · ДЕМО</span><h2>Менің прогресім</h2></div><p>Нәтижелер осы браузерде автоматты түрде сақталады. Авторизация қажет емес.</p></div>
+      <div class="progress-layout reveal"><div class="progress-overview"><div class="progress-ring" id="progressRing"><span><b id="overallPercent">0%</b><small>жалпы прогресс</small></span></div><div class="progress-summary"><small>СТУДЕНТ</small><h3>Оқу траекториясы</h3><p id="progressMessage">Алғашқы жеңіл деңгейді баста.</p><div class="summary-stats"><div><b id="levelStat">1/3</b><span>деңгей</span></div><div><b id="xpStat">0</b><span>XP</span></div><div><b id="accuracyStat">—</b><span>нәтиже</span></div></div></div></div><div class="action-cards"><button id="dailyChallenge"><span>☀</span><div><small>КҮНДЕЛІКТІ МИССИЯ</small><b>3 жаңа сұрақ</b><em>+60 XP →</em></div></button><button id="reviewMistakes"><span>↻</span><div><small>ҚАТЕЛЕРМЕН ЖҰМЫС</small><b><i id="mistakeCount">0</i> сұрақ</b><em>Қайталау →</em></div></button><button id="openCertificate" class="locked-action"><span>🏆</span><div><small>СЕРТИФИКАТ</small><b id="certificateStatus">Әзірге жабық</b><em>3 деңгейді аяқта →</em></div></button></div></div>
+      <div class="dynamic-achievements reveal"><div data-achievement="first"><span>🌱</span><b>Алғашқы қадам</b><small>Бір тесті аяқта</small></div><div data-achievement="level"><span>⚡</span><b>Деңгей шебері</b><small>Орташа деңгейді аш</small></div><div data-achievement="quest"><span>🪐</span><b>Ғарыш зерттеушісі</b><small>Physics Quest-ті жең</small></div><div data-achievement="perfect"><span>💎</span><b>Мінсіз нәтиже</b><small>15/15 дұрыс жауап</small></div></div>
+    </section>
+
+    <section class="quest-section section" id="game">
+      <div class="quest-heading reveal"><div><span class="kicker">ИНТЕРАКТИВТІ ҮСТЕЛ ОЙЫНЫ</span><h2>Physics Quest</h2></div><p>Кубикті лақтыр, карта бойымен жүр, тосын миссияларды орында. Әр ойын — жаңа маршрут.</p></div>
+      <div class="quest-shell reveal"><div class="quest-hud"><div><small>МАҚСАТ</small><b>250 XP жина</b></div><div><small>ЭНЕРГИЯ</small><b id="questEnergy">⚡⚡⚡</b></div><div><small>ҰПАЙ</small><b id="questXp">0 / 250 XP</b></div><div><small>АЙНАЛЫМ</small><b id="questRound">1</b></div></div><div class="quest-board" id="questBoard"><div class="quest-center"><div class="quest-logo">Q<span>Φ</span></div><div id="questMessage"><small>МИССИЯҒА ДАЙЫНСЫҢ БА?</small><h3>Кубикті лақтыр</h3><p>Қай ұяшық түсетінін ешкім білмейді.</p></div><div class="dice" id="questDice">⚄</div><button class="roll-btn" id="questRoll">КУБИКТІ ЛАҚТЫРУ</button><div class="quest-progress"><span id="questProgress"></span></div></div></div><div class="quest-legend"><span><i class="q-question"></i> Сұрақ</span><span><i class="q-lab"></i> Зертхана</span><span><i class="q-bonus"></i> Бонус</span><span><i class="q-event"></i> Тосын оқиға</span><button id="questReset">↻ Қайта бастау</button></div></div>
+    </section>
+  </main>
+  <footer><a class="brand" href="#top"><span class="brand-mark">Q</span><span>Qaz<span>Physics</span></span></a><p>Физиканы түсінудің жаңа траекториясы.</p><span>© 2026 QazPhysics · Оқу жобасы</span></footer>
+
+  <div class="modal" id="quizModal" aria-hidden="true"><div class="modal-card"><button class="modal-close" aria-label="Жабу">×</button><div id="quizContent"></div></div></div>
+  <div class="toast" id="toast"></div>
+  <script src="app.js"></script>
+  <script src="quest-game.js"></script>
+  <script src="quest-game-fix.js"></script>
+  <script src="course-features.js"></script>
+  <script src="stable-language.js"></script>
+</body></html>

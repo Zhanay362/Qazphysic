@@ -1,0 +1,1 @@
+body *{transition-property:opacity,transform,background-color,border-color!important}.quest-tile,.player-token,.pendulum-arm,.reveal{will-change:transform}.lang-switch button,.icon-btn{transition-duration:.18s!important}
